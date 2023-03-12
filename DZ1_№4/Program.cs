@@ -2,27 +2,28 @@
 
 
 int max = 0;
+int a, b, c;
 
 Console.Write("Введите первое число: ");
-int firstNumber = Convert.ToInt32(Console.ReadLine());
+int.TryParse(Console.ReadLine()!, out a);
 
 Console.Write("Введите второе число: ");
-int secondNumber = Convert.ToInt32(Console.ReadLine());
+int.TryParse(Console.ReadLine()!, out b);
 
 Console.Write("Введите третье число: ");
-int thirdNumber = Convert.ToInt32(Console.ReadLine());
+int.TryParse(Console.ReadLine()!, out c);
 
-if (firstNumber > max)
+if (a > max)
 {
-    max = firstNumber;
+    max = a;
 }
-if (secondNumber > max)
+if (b > max)
 {
-    max = secondNumber;
+    max = b;
 }
-if (thirdNumber > max)
+if (c > max)
 {
-    max = thirdNumber;
+    max = c;
 }
 
-Console.WriteLine("max = " + max);
+Console.Write($"max = {max}");
